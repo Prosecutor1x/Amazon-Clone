@@ -1,0 +1,20 @@
+body {
+  background-color: rgb(234, 237, 237);
+}
+
+.cart_top_img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.cart {
+  display: flex;
+  padding: 20px;
+  height: max-content;
+  background-color: white;
+}
+
+.cart_top_text {
+  padding: 10px;
+  border-bottom: 1px solid gray;
+}

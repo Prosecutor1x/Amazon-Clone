@@ -1,8 +1,8 @@
 import React from 'react';
 import './Subtotal.css';
 import CurrencyFormat from 'react-currency-format';
-import { UseStateValue } from './StateProvider';
-import { getBasketValue } from './reducer';
+import { UseStateValue } from '../utils/StateProvider';
+import { getBasketValue } from '../utils/reducer';
 
 function Subtotal() {
   const [{ basket }, dispatch] = UseStateValue();
@@ -16,7 +16,7 @@ function Subtotal() {
   return (
     <div className="subtotal">
       <CurrencyFormat
-        renderText={value => (
+        renderText={(value)=> (
           <>
             <p>
               SubTotal ({basket?.length}items):{' '}

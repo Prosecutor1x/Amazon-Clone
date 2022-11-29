@@ -1,12 +1,11 @@
 import React from 'react';
-import Checkoutitems from './Checkoutitems';
+import Checkoutitems from '../components/Checkoutitems';
 import './Checkout.css';
-import Subtotal from './Subtotal';
-import { ListItem } from '@mui/material';
-import { UseStateValue } from './StateProvider';
+import Subtotal from '../components/Subtotal';
+import { UseStateValue } from '../utils/StateProvider';
 
-function Checkout() {
-  const [{ basket }, dispatch] = UseStateValue();
+export function Checkout() {
+  const [{ basket },dispatch] = UseStateValue();
   return (
     <div className="cart">
       <div className="cart_left">
@@ -15,8 +14,7 @@ function Checkout() {
           src="https://images-na.ssl-images-amazon.com/images/G/02/UK_CCMP/TM/OCC_Amazon1._CB423492668_.jpg"
         />
         <h2 className="cart_top_text">Your shopping cart</h2>
-        {basket?.map(item => {
-          return (
+        {basket.map(item =>(
             <Checkoutitems
               id={item.id}
               title={item.title}
@@ -24,8 +22,7 @@ function Checkout() {
               rating={item.rating}
               img={item.img}
             />
-          );
-        })}
+        ))}
       </div>
 
       <div className="cart_right">
@@ -34,4 +31,4 @@ function Checkout() {
     </div>
   );
 }
-export default Checkout;
+

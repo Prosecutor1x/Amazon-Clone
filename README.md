@@ -1,4 +1,4 @@
-This the clone of E commerce giant Amazon\
+This the clone of E commerce giant Amazon.
 
 ![2](https://user-images.githubusercontent.com/100259871/171016845-3ff5d06f-c430-4f42-9db6-32a554b0c7e7.png)
 ![1](https://user-images.githubusercontent.com/100259871/171016874-be92f307-aae8-4f86-8631-e4f2a6edc2b5.png)

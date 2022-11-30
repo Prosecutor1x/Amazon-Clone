@@ -5,7 +5,6 @@
   justify-content: flex-end;
   margin: 20px;
   padding: 40px;
-  max-height: 400px;
   min-width: 100px;
   background-color: white;
   z-index: 1;
@@ -13,20 +12,12 @@
   box-shadow: rgba(0, 0, 0, 0.7);
 }
 .product > img {
-  max-height: 200px;
+  max-width: 300px;
   width: 100%;
-  object-fit: contain;
   margin-bottom: 15px;
 }
 .product_rating {
   display: flex;
-  width: 100%;
-  margin-top: -30px;
-  margin-bottom: 30px;
-}
-.product_info {
-  height: 100px;
-  margin-bottom: 45px;
   width: 100%;
 }
 .product_price {

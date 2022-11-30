@@ -1,11 +1,20 @@
 .header {
   height: 60px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
   background-color: black;
   position: sticky;
   top: 0;
   z-index: 100;
+}
+
+.flex{
+  display: flex;
+}
+
+.items-center{
+  align-items: center;
 }
 
 .header_logo {
@@ -85,4 +94,23 @@
   margin-top: 5px;
   padding-left: 2px;
   margin-right: -10px;
+}
+
+@media only screen and (min-width : 1024px) {
+  .header_search_sm{
+    display: flex;
+  }
+  .hidden{
+    display: none;
+  }
+}
+
+@media only screen and (max-width : 1024px) {
+  .header_search{
+    display: none;
+  }
+
+  .hidden-sm{
+    display: none;
+  }
 }

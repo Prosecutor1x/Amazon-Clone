@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React from 'react';
 import './Header.css';
 import SearchIcon from '@mui/icons-material/Search';
@@ -11,16 +12,19 @@ export function Header() {
   const nav=useNavigate()
   const [{ basket }] = UseStateValue();
   const {user,logout}=UserAuth()
+
   const handleLogOut=async()=>{
     try{
         await logout()
         nav('/login')
     }catch(e){
-      console.log(e.message)
+      console.error(e.message)
     }
   }
   return (
+    <>
     <div className="header">
+    <div className='flex items-center'>
       <Link to="/">
         <img
           className="header_logo"
@@ -34,6 +38,7 @@ export function Header() {
           <span className="header_option2">Select your address</span>
         </div>
       </div>
+    </div>
       <div className="header_search">
         <input
           className="header_searchInput"
@@ -44,7 +49,7 @@ export function Header() {
         <SearchIcon className="header_searchIcon" />
       </div>
 
-      <div className="header_navigation">
+      <div className="header_navigation hidden-sm">
         <div className="header_option">
           
           {user==null? 
@@ -78,6 +83,18 @@ export function Header() {
         </Link>
       </div>
     </div>
+    <div className="hidden">
+        <div className='header_search_sm' style={{display : 'flex', margin : '10px', backgroundColor : 'wheat'}}>
+            <input
+              className="header_searchInput"
+              type="text"
+              placeholder="What are you looking for?"
+            />
+
+            <SearchIcon className="header_searchIcon" />
+        </div>
+      </div>
+    </>
   );
 }
 

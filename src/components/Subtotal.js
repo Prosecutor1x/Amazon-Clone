@@ -15,24 +15,14 @@ function Subtotal() {
 
   return (
     <div className="subtotal">
-      
-        renderText={(value)=> (
-          <>
             <p>
-              SubTotal ({basket?.length}items):{' '}
-              <strong>{format.format(getBasketValue(basket))}</strong>
+              SubTotal ({basket?.length}items) :  {' '}
+              <strong>{format.format (getBasketValue (basket))}</strong>
             </p>
             <small className="subtotal_gift">
               <input type="checkbox" />
               This order contains a gift
             </small>
-          </>
-        )}
-        decimalScale={2}
-        value={getBasketValue(basket)}
-        displayType={'text'}
-        thousandSeparator={true}
-        prefix={'Rs'}
       <button>Proceed to Checkout</button>
     </div>
   );
